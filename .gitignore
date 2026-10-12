@@ -1,0 +1,10 @@
+# Secrets (never upload these)
+.streamlit/secrets.toml
+
+# Local database file (the app now uses Supabase)
+sportsapp.db
+
+# Python clutter
+venv/
+__pycache__/
+*.pyc
