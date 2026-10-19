@@ -18,16 +18,6 @@ from zoneinfo import ZoneInfo
 import streamlit as st
 from PIL import Image, ImageOps, UnidentifiedImageError
 
-st.markdown(
-    """
-    <style>
-    #MainMenu {visibility: hidden;}
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 from database import (
     MAX_PHOTOS_PER_VENUE,
@@ -66,6 +56,17 @@ from geocode import geocode_address, haversine_distance
 
 # Must be the first Streamlit command in the script
 st.set_page_config(page_title="TeamUp", page_icon="🏆")
+
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 SPORTS = ["Football", "Cricket", "Badminton", "Tennis", "Basketball"]
 SPORT_ICONS = {
